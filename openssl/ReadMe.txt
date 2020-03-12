@@ -1,0 +1,1 @@
+Compiled using Visual Studio 2019 with ActivePerl 5.28 installed. OpenSSL 1.0.2s sources obtained from https://www.openssl.org/source/old/1.0.2/openssl-1.0.2s.tar.gz
