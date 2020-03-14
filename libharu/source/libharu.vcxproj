@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{E6FCEBEC-5FFA-489C-BCC4-85252885928D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libharu</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>libhpdf</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)32d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)64d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)32</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)64</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;LIBHARU_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);HPDF_DLL_MAKE_CDECL</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\local\libs\libpng\include;C:\local\libs\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>C:\local\libs\libpng\lib;C:\local\libs\zlib\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>zlib32.lib;libpng32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;LIBHARU_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);HPDF_DLL_MAKE_CDECL</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\local\libs\libpng\include;C:\local\libs\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>C:\local\libs\libpng\lib;C:\local\libs\zlib\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>zlib64.lib;libpng64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;LIBHARU_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);HPDF_DLL_MAKE_CDECL</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\local\libs\libpng\include;C:\local\libs\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>C:\local\libs\libpng\lib;C:\local\libs\zlib\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>zlib32.lib;libpng32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;LIBHARU_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);HPDF_DLL_MAKE_CDECL</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\local\libs\libpng\include;C:\local\libs\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>C:\local\libs\libpng\lib;C:\local\libs\zlib\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>zlib64.lib;libpng64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="hpdf_3dmeasure.c" />
+    <ClCompile Include="hpdf_annotation.c" />
+    <ClCompile Include="hpdf_array.c" />
+    <ClCompile Include="hpdf_binary.c" />
+    <ClCompile Include="hpdf_boolean.c" />
+    <ClCompile Include="hpdf_catalog.c" />
+    <ClCompile Include="hpdf_destination.c" />
+    <ClCompile Include="hpdf_dict.c" />
+    <ClCompile Include="hpdf_doc.c" />
+    <ClCompile Include="hpdf_doc_png.c" />
+    <ClCompile Include="hpdf_encoder.c" />
+    <ClCompile Include="hpdf_encoder_cns.c" />
+    <ClCompile Include="hpdf_encoder_cnt.c" />
+    <ClCompile Include="hpdf_encoder_jp.c" />
+    <ClCompile Include="hpdf_encoder_kr.c" />
+    <ClCompile Include="hpdf_encoder_utf.c" />
+    <ClCompile Include="hpdf_encrypt.c" />
+    <ClCompile Include="hpdf_encryptdict.c" />
+    <ClCompile Include="hpdf_error.c" />
+    <ClCompile Include="hpdf_exdata.c" />
+    <ClCompile Include="hpdf_ext_gstate.c" />
+    <ClCompile Include="hpdf_font.c" />
+    <ClCompile Include="hpdf_fontdef.c" />
+    <ClCompile Include="hpdf_fontdef_base14.c" />
+    <ClCompile Include="hpdf_fontdef_cid.c" />
+    <ClCompile Include="hpdf_fontdef_cns.c" />
+    <ClCompile Include="hpdf_fontdef_cnt.c" />
+    <ClCompile Include="hpdf_fontdef_jp.c" />
+    <ClCompile Include="hpdf_fontdef_kr.c" />
+    <ClCompile Include="hpdf_fontdef_tt.c" />
+    <ClCompile Include="hpdf_fontdef_type1.c" />
+    <ClCompile Include="hpdf_font_cid.c" />
+    <ClCompile Include="hpdf_font_tt.c" />
+    <ClCompile Include="hpdf_font_type1.c" />
+    <ClCompile Include="hpdf_gstate.c" />
+    <ClCompile Include="hpdf_image.c" />
+    <ClCompile Include="hpdf_image_ccitt.c" />
+    <ClCompile Include="hpdf_image_png.c" />
+    <ClCompile Include="hpdf_info.c" />
+    <ClCompile Include="hpdf_list.c" />
+    <ClCompile Include="hpdf_mmgr.c" />
+    <ClCompile Include="hpdf_name.c" />
+    <ClCompile Include="hpdf_namedict.c" />
+    <ClCompile Include="hpdf_null.c" />
+    <ClCompile Include="hpdf_number.c" />
+    <ClCompile Include="hpdf_objects.c" />
+    <ClCompile Include="hpdf_outline.c" />
+    <ClCompile Include="hpdf_pages.c" />
+    <ClCompile Include="hpdf_page_label.c" />
+    <ClCompile Include="hpdf_page_operator.c" />
+    <ClCompile Include="hpdf_pdfa.c" />
+    <ClCompile Include="hpdf_real.c" />
+    <ClCompile Include="hpdf_streams.c" />
+    <ClCompile Include="hpdf_string.c" />
+    <ClCompile Include="hpdf_u3d.c" />
+    <ClCompile Include="hpdf_utils.c" />
+    <ClCompile Include="hpdf_xref.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="hpdf.h" />
+    <ClInclude Include="hpdf_3dmeasure.h" />
+    <ClInclude Include="hpdf_annotation.h" />
+    <ClInclude Include="hpdf_catalog.h" />
+    <ClInclude Include="hpdf_conf.h" />
+    <ClInclude Include="hpdf_config.h" />
+    <ClInclude Include="hpdf_consts.h" />
+    <ClInclude Include="hpdf_destination.h" />
+    <ClInclude Include="hpdf_doc.h" />
+    <ClInclude Include="hpdf_encoder.h" />
+    <ClInclude Include="hpdf_encrypt.h" />
+    <ClInclude Include="hpdf_encryptdict.h" />
+    <ClInclude Include="hpdf_error.h" />
+    <ClInclude Include="hpdf_exdata.h" />
+    <ClInclude Include="hpdf_ext_gstate.h" />
+    <ClInclude Include="hpdf_font.h" />
+    <ClInclude Include="hpdf_fontdef.h" />
+    <ClInclude Include="hpdf_gstate.h" />
+    <ClInclude Include="hpdf_image.h" />
+    <ClInclude Include="hpdf_info.h" />
+    <ClInclude Include="hpdf_list.h" />
+    <ClInclude Include="hpdf_mmgr.h" />
+    <ClInclude Include="hpdf_namedict.h" />
+    <ClInclude Include="hpdf_objects.h" />
+    <ClInclude Include="hpdf_outline.h" />
+    <ClInclude Include="hpdf_pages.h" />
+    <ClInclude Include="hpdf_page_label.h" />
+    <ClInclude Include="hpdf_pdfa.h" />
+    <ClInclude Include="hpdf_streams.h" />
+    <ClInclude Include="hpdf_types.h" />
+    <ClInclude Include="hpdf_u3d.h" />
+    <ClInclude Include="hpdf_utils.h" />
+    <ClInclude Include="hpdf_version.h" />
+    <ClInclude Include="t4.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="libhpdf.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
