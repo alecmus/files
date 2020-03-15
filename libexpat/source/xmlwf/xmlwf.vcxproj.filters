@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3fc9a621-6b12-436c-b61a-7fcfbad6d9e3}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{3a682069-700c-4fa9-ba2c-7593674885ef}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{b811e290-9cba-4f2d-b0df-399233364156}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="codepage.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="readfilemap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unixfilemap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="win32filemap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlfile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlwf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="codepage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xmltchar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
