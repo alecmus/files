@@ -1,0 +1,1 @@
+Compiled using Visual Studio 2019 with ActiveTcl 8.5.18.0.298892 installed. Linked against OpenSSL 1.0.2s. Source files used: sqlcipher-4.2.0.zip.
